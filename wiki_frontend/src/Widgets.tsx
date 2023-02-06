@@ -2,12 +2,15 @@ import {
   Button,
   Card,
   Container,
+  Divider,
   Grid,
   Paper,
   Stack,
   Typography,
 } from "@suid/material";
 import AddIcon from "@suid/icons-material/Add";
+import Widget from "./Widget";
+import { CloseFullscreen } from "@suid/icons-material";
 
 export default function () {
   return (
@@ -21,28 +24,16 @@ export default function () {
       <Typography>Widgets</Typography>
       <Grid container>
         <Grid item xs={6}>
-          <Button
-            sx={{
-              padding: "5%",
-            }}
-          >
-            <Stack alignItems={"center"} direction={"column"}>
-              <AddIcon></AddIcon>
-              <Typography>Node</Typography>
-            </Stack>
-          </Button>
+          <Widget>
+            <AddIcon/>
+            <Typography>Node</Typography>
+          </Widget>
         </Grid>
         <Grid item xs={6}>
-          <Button
-            sx={{
-              padding: "5%",
-            }}
-          >
-            <Stack alignItems={"center"} direction={"column"}>
-              <AddIcon></AddIcon>
-              <Typography>Connection</Typography>
-            </Stack>
-          </Button>
+            <Widget>
+                <CloseFullscreen/>
+                <Typography>Connection</Typography>
+            </Widget>
         </Grid>
       </Grid>
     </Paper>
