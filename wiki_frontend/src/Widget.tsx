@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   Container,
@@ -15,14 +16,22 @@ export interface WidgetProps {
 
 export default function (props: WidgetProps) {
   return (
-    <Button
+    <Box
       sx={{
-        padding: "5%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
       }}
     >
-      <Stack alignItems={"center"}>
-        <>{props.children}</>
-      </Stack>
-    </Button>
+      <Button
+        sx={{
+          padding: "5%",
+        }}
+      >
+        <Stack alignItems={"center"}>
+          <>{props.children}</>
+        </Stack>
+      </Button>
+    </Box>
   );
 }
