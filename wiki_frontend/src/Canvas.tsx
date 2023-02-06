@@ -1,4 +1,4 @@
-import { Paper, Typography } from "@suid/material";
+import { Box, Container, Paper, Typography } from "@suid/material";
 
 export default function () {
   return (
@@ -9,6 +9,13 @@ export default function () {
       }}
     >
       <Typography variant="h4">Canvas</Typography>
+      <Container>
+        <Box width={"500px"} height={"500px"}>
+          <span>
+            test
+          </span>
+        </Box>
+      </Container>
     </Paper>
   );
 }

@@ -21,6 +21,7 @@ export default function () {
       }}
     >
       <Typography variant="h5">Tools</Typography>
+      <Divider></Divider>
       <Grid container>
         <Grid item xs={6}>
           <Widget>
