@@ -17,23 +17,22 @@ export default function () {
     <Paper
       elevation={1}
       sx={{
-        margin: "5%",
-        padding: "5%",
+        padding: "10px",
       }}
     >
-      <Typography>Widgets</Typography>
+      <Typography variant="h5">Tools</Typography>
       <Grid container>
         <Grid item xs={6}>
           <Widget>
-            <AddIcon/>
+            <AddIcon />
             <Typography>Node</Typography>
           </Widget>
         </Grid>
         <Grid item xs={6}>
-            <Widget>
-                <CloseFullscreen/>
-                <Typography>Connection</Typography>
-            </Widget>
+          <Widget>
+            <CloseFullscreen />
+            <Typography>Connection</Typography>
+          </Widget>
         </Grid>
       </Grid>
     </Paper>
