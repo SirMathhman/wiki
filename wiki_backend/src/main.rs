@@ -1,6 +1,8 @@
 use std::env::consts::DLL_PREFIX;
-use rusqlite::Connection;
+
+use diesel::{Connection, SqliteConnection};
+use diesel::pg::PgConnection;
 
 fn main() {
-    let connection = Connection::open("./data/data.db").unwrap();
+    SqliteConnection::establish("./data/data.db").unwrap();
 }
