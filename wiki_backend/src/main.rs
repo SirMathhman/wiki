@@ -1,8 +1,22 @@
-use std::env::consts::DLL_PREFIX;
+fn main() {}
 
-use diesel::{Connection, SqliteConnection};
+#[cfg(test)]
+mod tests {
+    #[derive(Debug)]
+    struct Node {
+        title: String,
+    }
 
-fn main() {
-    SqliteConnection::establish("./data/data.db").unwrap();
+    impl PartialEq for Node {
+        fn eq(&self, other: &Self) -> bool {
+            return self.title == other.title;
+        }
+    }
 
+    #[test]
+    fn test() {
+        let first = Node { title: String::from("test") };
+        let second = Node { title: String::from("test") };
+        assert_eq!(first, second);
+    }
 }
