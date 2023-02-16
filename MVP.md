@@ -9,4 +9,4 @@ Define CRUD to be:
 The system should be able to:
 
 - CRUD Vertices
-- CRUD Edgesk
+- CRUD Edges
