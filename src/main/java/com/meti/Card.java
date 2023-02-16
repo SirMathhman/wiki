@@ -21,7 +21,7 @@ public class Card {
         return title;
     }
 
-    public class Partial {
+    public static class Partial {
         private final String title;
         private final String description;
 
