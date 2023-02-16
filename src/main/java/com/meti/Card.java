@@ -2,19 +2,23 @@ package com.meti;
 
 import java.util.Optional;
 
-public class Node {
+public class Card {
     private final String title;
     private final String description;
 
-    public Node(String title, String description) {
+    public Card(String title, String description) {
         this.title = title;
         this.description = description;
     }
 
-    public Node update(Partial partial) {
-        return new Node(
+    public Card update(Partial partial) {
+        return new Card(
                 partial.findTitle().orElse(title),
                 partial.findDescription().orElse(description));
+    }
+
+    public String computeTitle() {
+        return title;
     }
 
     private class Partial {
