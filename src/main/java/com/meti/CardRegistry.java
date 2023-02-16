@@ -114,7 +114,7 @@ public class CardRegistry {
                 .orElse(this.cards), dependencies);
     }
 
-    public Tuple<CardRegistry, Identifier> create(Card card) throws RegistryException {
+    public Tuple<CardRegistry, Identifier> create(Card card) {
         var nextKey = cards.keySet()
                 .stream()
                 .sorted()
@@ -125,5 +125,9 @@ public class CardRegistry {
         var copy = new HashMap<>(cards);
         copy.put(nextKey, card);
         return new Tuple<>(new CardRegistry(copy, dependencies), nextKey);
+    }
+
+    public Stream<Identifier> streamCards() {
+        return cards.keySet().stream();
     }
 }
