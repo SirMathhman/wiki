@@ -21,7 +21,7 @@ public class Card {
         return title;
     }
 
-    private class Partial {
+    public class Partial {
         private final String title;
         private final String description;
 
